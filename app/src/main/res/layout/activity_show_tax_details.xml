@@ -28,6 +28,21 @@
                 android:textAlignment="viewEnd"/>
         </TableRow>
 
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/val_full_name_display"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"/>
+        </TableRow>
+
+
     </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
