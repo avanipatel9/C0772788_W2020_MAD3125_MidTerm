@@ -10,5 +10,6 @@ public class ShowTaxDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_tax_details);
+        getSupportActionBar().setTitle("Tax Details");
     }
 }

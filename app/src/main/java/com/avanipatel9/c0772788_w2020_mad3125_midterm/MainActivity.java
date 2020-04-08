@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent mIntent = new Intent(MainActivity.this, ShowTaxDetails.class);
+               startActivity(mIntent);
             }
         });
     }
