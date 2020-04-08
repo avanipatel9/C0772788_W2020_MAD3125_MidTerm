@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         cardCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mIntent = new Intent(MainActivity.this, )
+                Intent mIntent = new Intent(MainActivity.this, ShowTaxDetails.class);
             }
         });
     }
