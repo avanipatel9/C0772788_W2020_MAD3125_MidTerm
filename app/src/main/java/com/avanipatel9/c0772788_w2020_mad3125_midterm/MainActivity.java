@@ -22,7 +22,7 @@ import java.util.Calendar;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity {
 
     @InjectView(R.id.sin_number_edit_text)
     TextInputEditText sinNumberEditText;
@@ -121,14 +121,20 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             public void onClick(View v) {
                 if (validateText(sinNumberEditText, sinNumber) && validateText(firstNameEditText, firstName) && validateText(lastNameEditText, lastName) && validateText(birthDateEditText, birthDate) && validateText(grossIncomeEditText, grossIncome) && validateText(rrspContributedEditText, rrspContribution)) {
 
-                    CRACustomer craCustomer = new CRACustomer(sinNumberEditText.getText().toString(), firstNameEditText.getText().toString(), lastNameEditText.getText().toString(), genderS, Double.parseDouble(grossIncomeEditText.getText().toString()), Double.parseDouble(rrspContributedEditText.getText().toString()));
+                    if(!validateSinNumber(sinNumberEditText.getText().toString()))
+                    {
+                        sinNumber.setError("Enter a valid 9 digit SIN number");
+                        return;
+                    }
+                    else{
+                        CRACustomer craCustomer = new CRACustomer(sinNumberEditText.getText().toString(), firstNameEditText.getText().toString(), lastNameEditText.getText().toString(), genderS, Double.parseDouble(grossIncomeEditText.getText().toString()), Double.parseDouble(rrspContributedEditText.getText().toString()));
 
-
-                    Intent mIntent = new Intent(MainActivity.this, ShowTaxDetails.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putParcelable("craCustomer", craCustomer);
-                    mIntent.putExtras(bundle);
-                    startActivity(mIntent);
+                        Intent mIntent = new Intent(MainActivity.this, ShowTaxDetails.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putParcelable("craCustomer", craCustomer);
+                        mIntent.putExtras(bundle);
+                        startActivity(mIntent);
+                    }
                 }
             }
         });
@@ -143,11 +149,20 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             return true;
         }
     }
-
-    int selectedGender = 0;
-
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        selectedGender = checkedId;
+    public boolean validateSinNumber(String s)
+    {
+        int n = 0;
+        if(sinNumberEditText.getText().toString().matches("^(\\d{3}-\\d{3}-\\d{3})|(\\d{9})$"))
+        {
+            n = 1;
+            return true;
+        }
+        if(n == 0)
+        {
+            return false;
+        }
+        return true;
     }
+
+
 }

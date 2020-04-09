@@ -80,8 +80,8 @@ public class ShowTaxDetails extends AppCompatActivity {
             }
 
             valTaxableIncomeDisplay.setText(format.format(craCustomer.getTotalTaxableIncome()));
-            valFederalTaxDisplay.setText(String.format("%2f", craCustomer.getFederalTax()));
-            valProvincialTaxDisplay.setText(String.format("%2f", craCustomer.getProvincialTax()));
+            valFederalTaxDisplay.setText(format.format( craCustomer.getFederalTax()));
+            valProvincialTaxDisplay.setText(format.format(craCustomer.getProvincialTax()));
             valTotalTaxDisplay.setText(format.format(craCustomer.getTotalTaxPayed()));
 
         }
