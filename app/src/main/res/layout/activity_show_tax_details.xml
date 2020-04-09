@@ -17,13 +17,16 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="26dp"
                 android:text="Person SIN Number"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_sin_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="26dp"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -33,7 +36,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Full Name"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_full_name_display"
                 android:layout_width="0dp"
@@ -47,7 +53,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Date of Birth"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_birth_date_display"
                 android:layout_width="0dp"
@@ -61,7 +70,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Gender"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_gender_display"
                 android:layout_width="0dp"
@@ -75,7 +87,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Age"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_age_display"
                 android:layout_width="0dp"
@@ -89,7 +104,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Tax Filling Date"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_tax_filling_date_display"
                 android:layout_width="0dp"
@@ -103,7 +121,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Gross Income"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_gross_income_display"
                 android:layout_width="0dp"
@@ -117,7 +138,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="CPP"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_cpp_display"
                 android:layout_width="0dp"
@@ -131,7 +155,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Employment Insurance(EI)"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_ei_display"
                 android:layout_width="0dp"
@@ -145,7 +172,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="RRSP Contributed"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_rrsp_contributed_display"
                 android:layout_width="0dp"
@@ -159,7 +189,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Carry Forward RRSP"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_carry_forward_rrsp_display"
                 android:layout_width="0dp"
@@ -173,7 +206,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Total Taxable Income"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_taxable_income_display"
                 android:layout_width="0dp"
@@ -187,7 +223,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Federal Tax"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_federal_tax_display"
                 android:layout_width="0dp"
@@ -201,7 +240,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Provincial Tax"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_provincial_tax_display"
                 android:layout_width="0dp"
@@ -215,7 +257,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Total Tax Payed"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/val_total_tax_display"
                 android:layout_width="0dp"

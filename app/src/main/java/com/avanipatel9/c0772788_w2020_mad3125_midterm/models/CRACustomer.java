@@ -25,6 +25,7 @@ public class CRACustomer implements Parcelable {
     private Double cpp;
     private Double ei;
     private Double rrspContributed;
+    private Double maxRRSPAllowed;
     private Double carryForwardRRSP;
     private Double totalTaxableIncome;
     private Double totalTaxPayed;
@@ -41,6 +42,10 @@ public class CRACustomer implements Parcelable {
 
     public String getSinNumber() {
         return sinNumber;
+    }
+
+    public Double getMaxRRSPAllowed() {
+        return maxRRSPAllowed;
     }
 
     public void setSinNumber(String sinNumber) {
