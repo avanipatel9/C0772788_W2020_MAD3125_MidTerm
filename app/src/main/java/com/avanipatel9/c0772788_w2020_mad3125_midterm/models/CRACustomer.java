@@ -44,10 +44,6 @@ public class CRACustomer implements Parcelable {
         return sinNumber;
     }
 
-    public Double getMaxRRSPAllowed() {
-        return maxRRSPAllowed;
-    }
-
     public void setSinNumber(String sinNumber) {
         this.sinNumber = sinNumber;
     }
@@ -58,6 +54,10 @@ public class CRACustomer implements Parcelable {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getFullName() {
+        return firstName +" "+ lastName;
     }
 
     public String getLastName() {
@@ -74,6 +74,13 @@ public class CRACustomer implements Parcelable {
 
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public int getAge() {
+        int age;
+        age = Period.between(birthDate, LocalDate.now()).getYears();
+        return age;
     }
 
     public String getGender() {
@@ -100,15 +107,8 @@ public class CRACustomer implements Parcelable {
         this.rrspContributed = rrspContributed;
     }
 
-    public String getFullName() {
-        return firstName +" "+ lastName;
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public int getAge() {
-        int age;
-        age = Period.between(birthDate, LocalDate.now()).getYears();
-        return age;
+    public Double getMaxRRSPAllowed() {
+        return grossIncome*18/100;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -125,19 +125,19 @@ public class CRACustomer implements Parcelable {
     }
 
     public Double getCpp() {
-        return cpp;
+        return grossIncome*5.10/100;
     }
 
     public Double getEi() {
-        return ei;
+        return grossIncome*1.62/100;
     }
 
     public Double getCarryForwardRRSP() {
-        return carryForwardRRSP;
+        return maxRRSPAllowed-rrspContributed;
     }
 
     public Double getTotalTaxableIncome() {
-        return totalTaxableIncome;
+        return grossIncome - (cpp + ei + rrspContributed);
     }
 
     public Double getTotalTaxPayed() {
