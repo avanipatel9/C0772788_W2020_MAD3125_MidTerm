@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     tools:context=".ShowTaxDetails">
-
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,6 +24,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/bree_serif"
                 android:text="Person SIN Number"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:textColor="#000000"
                 android:textStyle="bold" />
 
@@ -30,6 +34,9 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:textAlignment="viewEnd" />
         </TableRow>
 
@@ -40,8 +47,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Full Name"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -49,16 +58,21 @@
             <TextView
                 android:id="@+id/val_full_name_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:textAlignment="viewEnd"/>
         </TableRow>
 
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Date of Birth"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -66,7 +80,10 @@
             <TextView
                 android:id="@+id/val_birth_date_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -74,8 +91,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Gender"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -83,7 +102,10 @@
             <TextView
                 android:id="@+id/val_gender_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -91,8 +113,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Age"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -100,7 +124,10 @@
             <TextView
                 android:id="@+id/val_age_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -108,8 +135,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Tax Filling Date"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -117,7 +146,10 @@
             <TextView
                 android:id="@+id/val_tax_filling_date_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -125,8 +157,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Gross Income"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -134,7 +168,10 @@
             <TextView
                 android:id="@+id/val_gross_income_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -142,8 +179,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="CPP"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -151,7 +190,10 @@
             <TextView
                 android:id="@+id/val_cpp_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -159,8 +201,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Employment Insurance(EI)"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -168,7 +212,10 @@
             <TextView
                 android:id="@+id/val_ei_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -176,8 +223,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="RRSP Contributed"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -185,7 +234,10 @@
             <TextView
                 android:id="@+id/val_rrsp_contributed_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -193,8 +245,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Carry Forward RRSP"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -202,7 +256,10 @@
             <TextView
                 android:id="@+id/val_carry_forward_rrsp_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -210,8 +267,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Total Taxable Income"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -219,7 +278,10 @@
             <TextView
                 android:id="@+id/val_taxable_income_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -227,8 +289,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Federal Tax"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -236,7 +300,10 @@
             <TextView
                 android:id="@+id/val_federal_tax_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -244,8 +311,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Provincial Tax"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -253,7 +322,10 @@
             <TextView
                 android:id="@+id/val_provincial_tax_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
@@ -261,8 +333,10 @@
         <TableRow>
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Total Tax Payed"
+                android:gravity="center"
+                android:textAlignment="viewStart"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
@@ -270,11 +344,16 @@
             <TextView
                 android:id="@+id/val_total_tax_display"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/bree_serif"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"/>
         </TableRow>
 
     </TableLayout>
+
+</androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

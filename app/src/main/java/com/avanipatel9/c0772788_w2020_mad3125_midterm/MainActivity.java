@@ -1,15 +1,16 @@
 package com.avanipatel9.c0772788_w2020_mad3125_midterm;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
     TextInputLayout rrspContribution;
     @InjectView(R.id.card_calculate)
     CardView cardCalculate;
+    @InjectView(R.id.birth_date_edit_text)
+    TextInputEditText birthDateEditText;
+    @InjectView(R.id.birth_date)
+    TextInputLayout birthDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent mIntent = new Intent(MainActivity.this, ShowTaxDetails.class);
-               startActivity(mIntent);
+                startActivity(mIntent);
             }
         });
     }
