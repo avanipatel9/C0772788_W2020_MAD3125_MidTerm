@@ -191,7 +191,13 @@ public class CRACustomer implements Parcelable {
 
     private void calculateTotalTaxableIncome()
     {
-        this.totalTaxableIncome = this.grossIncome - (this.cpp + this.ei + this.rrspContributed);
+        if(rrspContributed<maxRRSPAllowed) {
+            this.totalTaxableIncome = this.grossIncome - (this.cpp + this.ei + this.rrspContributed);
+        }
+        else
+        {
+            this.totalTaxableIncome = this.grossIncome - (this.cpp + this.ei + this.maxRRSPAllowed);
+        }
     }
 
     private void calculateFederalTax(double totalTaxableIncome)

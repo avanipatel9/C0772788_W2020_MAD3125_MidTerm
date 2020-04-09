@@ -1,5 +1,6 @@
 package com.avanipatel9.c0772788_w2020_mad3125_midterm;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -67,7 +68,17 @@ public class ShowTaxDetails extends AppCompatActivity {
             valCppDisplay.setText(format.format(craCustomer.getCpp()));
             valEiDisplay.setText(format.format(craCustomer.getEi()));
             valRrspContributedDisplay.setText(format.format(craCustomer.getRrspContributed()));
-            valCarryForwardRrspDisplay.setText(format.format(craCustomer.getCarryForwardRRSP()));
+
+            if(craCustomer.getCarryForwardRRSP() < 0)
+            {
+                valCarryForwardRrspDisplay.setTextColor(Color.RED);
+                valCarryForwardRrspDisplay.setText(format.format(craCustomer.getCarryForwardRRSP()));
+            }
+            else
+            {
+                valCarryForwardRrspDisplay.setText(format.format(craCustomer.getCarryForwardRRSP()));
+            }
+
             valTaxableIncomeDisplay.setText(format.format(craCustomer.getTotalTaxableIncome()));
             valFederalTaxDisplay.setText(String.format("%2f", craCustomer.getFederalTax()));
             valProvincialTaxDisplay.setText(String.format("%2f", craCustomer.getProvincialTax()));
