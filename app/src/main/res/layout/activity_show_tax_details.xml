@@ -15,21 +15,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <TableRow>
+
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="26dp"
-                android:text="Person SIN Number"
+                android:layout_height="50dp"
                 android:layout_weight="1"
-                android:textColor="#000000"
                 android:fontFamily="@font/bree_serif"
-                android:textStyle="bold"/>
+                android:text="Person SIN Number"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/val_sin_display"
                 android:layout_width="0dp"
-                android:layout_height="26dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
-                android:textAlignment="viewEnd"/>
+                android:textAlignment="viewEnd" />
         </TableRow>
+
+<!--        <View-->
+<!--            android:layout_height="2dip"-->
+<!--            android:background="#FF909090" />-->
 
         <TableRow>
             <TextView
