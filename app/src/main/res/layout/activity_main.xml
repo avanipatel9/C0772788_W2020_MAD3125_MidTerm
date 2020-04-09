@@ -84,6 +84,7 @@
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -131,7 +132,7 @@
                 android:id="@+id/gross_income_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@android:drawable/ic_menu_add" />
+                android:drawableLeft="@drawable/dollar" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -144,10 +145,12 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:textSize="12sp"
             android:hint="RRSP Contributed">
+
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/postal_code_edit_text"
+                android:id="@+id/rrsp_contributed_edit_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/dollar" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout

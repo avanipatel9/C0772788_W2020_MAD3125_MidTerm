@@ -11,7 +11,6 @@ import androidx.cardview.widget.CardView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -35,16 +34,17 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText grossIncomeEditText;
     @InjectView(R.id.gross_income)
     TextInputLayout grossIncome;
-    @InjectView(R.id.postal_code_edit_text)
-    TextInputEditText postalCodeEditText;
     @InjectView(R.id.rrsp_contribution)
     TextInputLayout rrspContribution;
     @InjectView(R.id.card_calculate)
     CardView cardCalculate;
+    @InjectView(R.id.rrsp_contributed_edit_text)
+    TextInputEditText rrspContributedEditText;
     @InjectView(R.id.birth_date_edit_text)
     TextInputEditText birthDateEditText;
     @InjectView(R.id.birth_date)
     TextInputLayout birthDate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
