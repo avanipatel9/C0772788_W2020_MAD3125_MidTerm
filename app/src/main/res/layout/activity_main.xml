@@ -160,7 +160,6 @@
                 android:id="@+id/card_calculate"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
                 app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="7dp">
                 <TextView
