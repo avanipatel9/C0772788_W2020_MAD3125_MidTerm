@@ -133,7 +133,8 @@
                 android:id="@+id/gross_income_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/dollar" />
+                android:drawableLeft="@drawable/dollar"
+                android:inputType="numberDecimal"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -151,7 +152,8 @@
                 android:id="@+id/rrsp_contributed_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/dollar" />
+                android:drawableLeft="@drawable/dollar"
+                android:inputType="numberDecimal"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
