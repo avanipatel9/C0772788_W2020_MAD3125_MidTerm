@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @InjectView(R.id.other)
     RadioButton other;
     private RadioButton rbSelectedGender;
+    String age;
 
     private DatePickerDialog picker;
     final Calendar calendar = Calendar.getInstance();
@@ -127,13 +128,26 @@ public class MainActivity extends AppCompatActivity {
                         return;
                     }
                     else{
-                        CRACustomer craCustomer = new CRACustomer(sinNumberEditText.getText().toString(), firstNameEditText.getText().toString(), lastNameEditText.getText().toString(), genderS, Double.parseDouble(grossIncomeEditText.getText().toString()), Double.parseDouble(rrspContributedEditText.getText().toString()));
 
-                        Intent mIntent = new Intent(MainActivity.this, ShowTaxDetails.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putParcelable("craCustomer", craCustomer);
-                        mIntent.putExtras(bundle);
-                        startActivity(mIntent);
+                        age = getAge();
+                        int intAge = Integer.parseInt(age);
+                        if(intAge<18)
+                        {
+                            birthDate.setError("Age must be above 18yrs");
+                            return;
+                        }
+                        else
+                        {
+                            CRACustomer craCustomer = new CRACustomer(sinNumberEditText.getText().toString(), firstNameEditText.getText().toString(), lastNameEditText.getText().toString(), genderS, Double.parseDouble(grossIncomeEditText.getText().toString()), Double.parseDouble(rrspContributedEditText.getText().toString()));
+
+                            Intent mIntent = new Intent(MainActivity.this, ShowTaxDetails.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putParcelable("craCustomer", craCustomer);
+                            mIntent.putExtra("dob",birthDateEditText.getText().toString());
+                            mIntent.putExtra("age", age);
+                            mIntent.putExtras(bundle);
+                            startActivity(mIntent);
+                        }
                     }
                 }
             }
@@ -162,6 +176,20 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+
+    public String getAge(){
+        StringBuilder todaydate=new StringBuilder();
+        Calendar today=Calendar.getInstance();
+        int age=today.get(Calendar.YEAR)-picker.getDatePicker().getYear();
+        if (today.get(Calendar.MONTH) < picker.getDatePicker().getYear()) {
+            age--;
+        } else if (today.get(Calendar.MONTH) == picker.getDatePicker().getYear()
+                && today.get(Calendar.DAY_OF_MONTH) < picker.getDatePicker().getYear()) {
+            age--;
+        }
+        todaydate.append(age);
+        return todaydate.toString();
     }
 
 

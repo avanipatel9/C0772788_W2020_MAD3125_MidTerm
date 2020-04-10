@@ -59,10 +59,11 @@ public class ShowTaxDetails extends AppCompatActivity {
         if (getIntent().getExtras() != null) {
             craCustomer = (CRACustomer) getIntent().getExtras().getParcelable("craCustomer");
             valSinDisplay.setText(craCustomer.getSinNumber());
+
             valFullNameDisplay.setText(craCustomer.getFullName());
-            //valBirthDateDisplay.setText(craCustomer.getBirthDate());
+            valBirthDateDisplay.setText(getIntent().getStringExtra("dob"));
             valGenderDisplay.setText(craCustomer.getGender());
-            //valAgeDisplay.setText(craCustomer.getAge());
+            valAgeDisplay.setText(getIntent().getStringExtra("age"));
             valTaxFillingDateDisplay.setText(craCustomer.getTaxFillingDate());
             valGrossIncomeDisplay.setText(format.format(craCustomer.getGrossIncome()));
             valCppDisplay.setText(format.format(craCustomer.getCpp()));

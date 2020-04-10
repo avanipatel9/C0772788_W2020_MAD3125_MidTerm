@@ -20,7 +20,6 @@ public class CRACustomer implements Parcelable {
     private String fullName;
     private Date birthDate;
     private String gender;
-    private int age;
     private String taxFillingDate;
     private Double grossIncome;
     private Double federalTax;
@@ -37,7 +36,6 @@ public class CRACustomer implements Parcelable {
         this.sinNumber = sinNumber;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthDate = birthDate;
         this.gender = gender;
         this.grossIncome = grossIncome;
         this.rrspContributed = rrspContributed;
@@ -87,18 +85,6 @@ public class CRACustomer implements Parcelable {
         this.birthDate = birthDate;
     }
 
-    public int getAge(int year, int month, int day)  {
-        int age;
-        Calendar dob = Calendar.getInstance();
-        Calendar today = Calendar.getInstance();
-
-        dob.set(year, month, day);
-
-        age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
-
-        return age;
-    }
-
     public String getGender() {
         return gender;
     }
@@ -128,7 +114,7 @@ public class CRACustomer implements Parcelable {
     }
 
     public String getTaxFillingDate() {
-        String pattern = "yyyy-MM-dd";
+        String pattern = "d-M-yyyy";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
         return simpleDateFormat.format(new Date());
     }
@@ -251,7 +237,6 @@ public class CRACustomer implements Parcelable {
         dest.writeString(this.lastName);
         dest.writeString(this.fullName);
         dest.writeString(this.gender);
-        dest.writeInt(this.age);
         dest.writeSerializable(this.taxFillingDate);
         dest.writeValue(this.grossIncome);
         dest.writeValue(this.federalTax);
@@ -271,7 +256,6 @@ public class CRACustomer implements Parcelable {
         this.lastName = in.readString();
         this.fullName = in.readString();
         this.gender = in.readString();
-        this.age = in.readInt();
         this.taxFillingDate = in.readString();
         this.grossIncome = (Double) in.readValue(Double.class.getClassLoader());
         this.federalTax = (Double) in.readValue(Double.class.getClassLoader());
