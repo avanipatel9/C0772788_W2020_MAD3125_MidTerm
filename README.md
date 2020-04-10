@@ -8,3 +8,4 @@ https://flatuicolors.com/
 https://stackoverflow.com/questions/22192291/how-to-change-the-status-bar-color-in-android
 https://material.io/
 https://plugins.jetbrains.com/plugin/7332-android-parcelable-code-generator
+https://nsscreencast.com/episodes/367-dates-and-times
